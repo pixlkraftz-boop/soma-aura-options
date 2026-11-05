@@ -84,6 +84,7 @@
     <p class="why">The list below is aimed at that gap. The early options exist so the next ranks of staff skill change those hours. The later options are for fights with other players, kept separate so a levelling aura stays a levelling aura.</p>
     <p>These are alternatives. Two auras at once is already how levelling works. If more than two of these could run together, cap active auras at two. Mana Leech stays as it is: a tenth of spell damage as mana, after it was cut down from a half. Mana Shield stays as it is.</p>
     <p class="note">The pictures are new drawings in the style of the inventory sprites, so the ideas are easy to tell apart. They are not icons from the client. Prices sit in the same band as the staff auras already sold by Chandalir. The numbers are a starting point to tune.</p>
+    <p class="note">Past the auras are three spell changes for rifts and dungeons. Mass Heal and Chain Lightning stop being a square on the floor. Mending is a heal that keeps going after the cast.</p>
   </header>
 
   <h2>Worth starting with</h2>
@@ -195,6 +196,45 @@
       <p class="where">Cast 3 HP. Lasts 2 minutes. 40,000 Barr.</p>
     </div>
   </article>
+
+  <h2>Healing, and Chain Lightning</h2>
+
+  <p class="why">In a rift or a dungeon the group does not stand in one square. Mass Heal and Chain Lightning both ask them to. These keep the listed numbers and change the shape. Mending is the extra spell: a heal that carries on after you cast it, so you can turn to the next person while the first is still being healed.</p>
+
+  <article>
+    <div class="slot"><img src="icons/chain-heal.png" alt=""></div>
+    <div>
+      <h3>Chain Heal</h3>
+      <p class="meta">Mass Heal, cast as a bounce. DaeYoo, Pandemonium, INT 50. The square on the floor goes.</p>
+      <p>You cast it on yourself, or on a party or guild member. That person is healed for the current Mass Heal amount. Rank 1 is listed at 8. Rank 4 is listed at 14. Both are before INT.</p>
+      <p>It then jumps to the nearest other party or guild member within 2 steps of the person just healed. Up to 4 people, including the first. Each jump heals the same amount. It will not heal the same person twice, it will not heal a monster, and it will not heal anyone outside the party and the guild.</p>
+      <p class="where">If the next person is more than 2 steps away, the chain stops. Mana stays 20 at rank 1 and 14 at rank 4. 35,000 Barr, as it is now. The length of the chain is the number to tune.</p>
+    </div>
+  </article>
+
+  <article>
+    <div class="slot"><img src="icons/chain-lightning.png" alt=""></div>
+    <div>
+      <h3>Chain Lightning</h3>
+      <p class="meta">The same spell. The square on the floor goes. INT 72.</p>
+      <p>You aim it at one monster, or at one player. That target takes the current damage. Rank 1 is 35. Rank 4 is 39. Both are before INT and magic attack.</p>
+      <p>It jumps to the nearest other target within 2 steps, up to 4 in total. Each jump deals the same damage. Aimed at a monster, the jumps stay on monsters. Aimed at a player, the jumps stay on players. A cast into a pack does not clip a player standing beside it.</p>
+      <p class="where">Mana and cast time stay as they are. Rank 1 is 34 mana and 1.40 seconds. Rank 4 is 28 mana and 1.22 seconds. Echo Cast still does not copy the jumps. Hellfire stays the circle on the ground.</p>
+    </div>
+  </article>
+
+  <article>
+    <div class="slot"><img src="icons/mending.png" alt=""></div>
+    <div>
+      <h3>Mending</h3>
+      <p class="meta">New. Sits beside Healing Magic and Swift Heal. It replaces neither.</p>
+      <p>Cast it on yourself, or on one party or guild member. Four heals follow, one every 2 seconds. Each heal is half a Healing Magic of the same rank, so the full 8 seconds equals two Healing Magics. Rank 1 Healing Magic is listed at 10, so each tick is 5.</p>
+      <p>One Mending on a person at a time. Casting it again replaces the old one. It does not jump. Swift Heal stays the instant heal, a third of their health, on its 8 second cooldown. Rejuvenation stays the heal for the whole party.</p>
+      <p class="where">Rank 1 costs 6 mana, the cost of two Healing Magics. Higher ranks keep that ratio. It is a cast, not an instant. Devils learn it with Healing Magic. Humans learn it with the White Magician's heals.</p>
+    </div>
+  </article>
+
+  <p class="note">One fight, separate from the spells. The solo mage dungeon's final room still brings more melee monsters than casters. That last room should be the magic fight.</p>
 
   <footer>
     <p>Draft, 5 Nov 2026. A suggestion. Not a patch.</p>
