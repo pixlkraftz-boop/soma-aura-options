@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staff aura options</title>
+<style>
+  :root {
+    --bg: #120e0b;
+    --ink: #f0e2cc;
+    --muted: #c3b39a;
+    --gold: #e4c27a;
+    --line: #6a522c;
+    --card: #1c1612;
+    --slot: #070605;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(1200px 500px at 50% -10%, #3a2a18 0%, transparent 55%),
+      var(--bg);
+    color: var(--ink);
+    font: 17px/1.5 "Segoe UI", system-ui, sans-serif;
+  }
+  main { max-width: 820px; margin: 0 auto; padding: 40px 20px 72px; }
+  header h1 {
+    margin: 0 0 8px;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: 34px;
+    letter-spacing: 0.01em;
+    color: var(--gold);
+  }
+  header p, .note { color: var(--muted); margin: 0 0 12px; }
+  h2 {
+    margin: 36px 0 12px;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--gold);
+  }
+  article {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 16px;
+    padding: 16px;
+    margin: 0 0 12px;
+    background: var(--card);
+    border: 1px solid #3a2e22;
+    border-radius: 4px;
+  }
+  .slot {
+    width: 84px;
+    height: 84px;
+    background: var(--slot);
+    border: 2px solid var(--line);
+    box-shadow: inset 0 0 0 1px #000;
+    display: grid;
+    place-items: center;
+  }
+  .slot img {
+    width: 72px;
+    height: 72px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+  h3 { margin: 0; font-size: 18px; font-weight: 600; }
+  .meta { margin: 2px 0 8px; color: var(--gold); font-size: 14px; }
+  article p { margin: 0 0 8px; }
+  article p:last-child { margin: 0; }
+  .where { color: var(--muted); font-size: 15px; }
+  footer { margin-top: 28px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Staff aura options</h1>
+    <p>A menu for Myth of Soma, from a devil mage. These are alternatives. They are not a list to switch on all at once.</p>
+    <p>Two auras at once is already how levelling works. If more than two of these could run together, cap active auras at two. Mana Leech stays as it is: a tenth of spell damage as mana, after it was cut down from a half. Mana Shield stays as it is.</p>
+    <p class="note">The pictures are new drawings in the style of the inventory sprites, so the ideas are easy to tell apart. They are not icons from the client. Prices sit in the same band as the staff auras already sold by Chandalir. The numbers are a starting point to tune.</p>
+  </header>
+
+  <h2>Worth starting with</h2>
+
+  <article>
+    <div class="slot"><img src="icons/arcane-tempo.png" alt=""></div>
+    <div>
+      <h3>Arcane Tempo</h3>
+      <p class="meta">Staff 40, with an upgrade at staff 70. Replaces Rapid Magic Casting.</p>
+      <p>Rank 1 is 20% cast speed. That is the same as Rapid Magic Casting, and it works against monsters and against players.</p>
+      <p>The upgrade keeps the 20% cast speed, and 8% of damage dealt to a monster comes back as mana. Damage to a player gives none. While the upgrade is up, Mana Leech does not also return mana, so the two do not add.</p>
+      <p class="where">Cast 3 HP. Rank 1 lasts 60 seconds. The upgrade lasts 2 minutes. 50,000 Barr.</p>
+    </div>
+  </article>
+
+  <article>
+    <div class="slot"><img src="icons/echo-cast.png" alt=""></div>
+    <div>
+      <h3>Echo Cast</h3>
+      <p class="meta">Staff 120. Replaces Mage's Contrivance.</p>
+      <p>10% chance, and only when the spell's direct target is a monster. That direct hit fires again at once, at full damage, with no mana and no cast bar. The echo cannot proc itself. It copies damage only, so a stun, a slow or a drain does not double.</p>
+      <p>Bounces and ground circles are not copied. Chain Lightning does not repeat its jumps. Hellfire does not lay a second circle. If the direct target is a player, the chance is 0.</p>
+      <p class="where">Cast 3 HP. Lasts 2 minutes. 150,000 Barr. This is the multicast, kept to the one monster you aimed at.</p>
+    </div>
+  </article>
+
+  <h2>Other levelling jobs</h2>
+
+  <article>
+    <div class="slot"><img src="icons/monster-focus.png" alt=""></div>
+    <div>
+      <h3>Monster Focus</h3>
+      <p class="meta">Staff 80. New. Repulse stays a button. Mana Shield stays.</p>
+      <p>Spells deal 8% more damage to monsters. A player takes the normal amount. It is a flat bonus, not a proc, and it does not add cast speed or mana.</p>
+      <p class="where">Cast 3 HP. Lasts 2 minutes. 70,000 Barr.</p>
+    </div>
+  </article>
+
+  <article>
+    <div class="slot"><img src="icons/second-wind.png" alt=""></div>
+    <div>
+      <h3>Second Wind</h3>
+      <p class="meta">Staff 100. New.</p>
+      <p>Killing a monster restores 4% of max HP, at most once every 4 seconds. Killing a player does not heal you. If you and a player have hit each other in the last 10 seconds, a monster kill does not heal you either. That stops eating a weak monster for health during a fight.</p>
+      <p class="where">Cast 3 HP. Lasts 2 minutes. 100,000 Barr.</p>
+    </div>
+  </article>
+
+  <article>
+    <div class="slot"><img src="icons/first-spark.png" alt=""></div>
+    <div>
+      <h3>First Spark</h3>
+      <p class="meta">Staff 25. New. Mana Leech stays.</p>
+      <p>The first damaging spell that hits a monster, while that monster is still above 80% health, deals 25% extra. Once per monster. A player is never this target. It is an opener for a fresh pull, not a buff that is always on.</p>
+      <p class="where">Cast 3 HP. Lasts 2 minutes. 15,000 Barr.</p>
+    </div>
+  </article>
+
+  <article>
+    <div class="slot"><img src="icons/still-cast.png" alt=""></div>
+    <div>
+      <h3>Still Cast</h3>
+      <p class="meta">Staff 90. New. Useful against monsters and against players.</p>
+      <p>A hit moves your cast bar 40% less. Nothing about damage, mana or speed changes. It is the one that helps when something is standing on you, whether that something is a monster or a player.</p>
+      <p class="where">Cast 3 HP. Lasts 2 minutes. 80,000 Barr.</p>
+    </div>
+  </article>
+
+  <h2>Player fights</h2>
+
+  <article>
+    <div class="slot"><img src="icons/duel-mark.png" alt=""></div>
+    <div>
+      <h3>Duel Mark</h3>
+      <p class="meta">Staff 110. New.</p>
+      <p>A spell aimed at a player has a 10% chance to finish with no cast time. The mana is still paid. After it happens, it cannot happen again for 8 seconds. A monster does not trigger it. This is a tempo moment in a fight, not a second Echo Cast.</p>
+      <p class="where">Cast 3 HP. Lasts 2 minutes. 120,000 Barr.</p>
+    </div>
+  </article>
+
+  <article>
+    <div class="slot"><img src="icons/spell-ward.png" alt=""></div>
+    <div>
+      <h3>Spell Ward</h3>
+      <p class="meta">Staff 130. New. Does not replace Mana Shield.</p>
+      <p>Spells cast by a player deal 10% less damage to you. Damage from a monster is unchanged. The damage still comes out of health. Mana Shield remains the aura that moves damage into mana.</p>
+      <p class="where">Cast 3 HP. Lasts 60 seconds. 50,000 Barr.</p>
+    </div>
+  </article>
+
+  <article>
+    <div class="slot"><img src="icons/last-word.png" alt=""></div>
+    <div>
+      <h3>Last Word</h3>
+      <p class="meta">Staff 140. New. Blink at staff 150 stays.</p>
+      <p>When a player's hit takes you under 30% HP, your next spell within 8 seconds has no cast time. The mana is still paid. It can happen once every 45 seconds. A monster's hit does not arm it.</p>
+      <p class="where">Cast 3 HP. Lasts 2 minutes. 150,000 Barr.</p>
+    </div>
+  </article>
+
+  <h2>Crowded fields</h2>
+
+  <article>
+    <div class="slot"><img src="icons/civil-circle.png" alt=""></div>
+    <div>
+      <h3>Civil Circle</h3>
+      <p class="meta">Staff 55. New. A switch, not a damage aura.</p>
+      <p>While it is up, area spells damage monsters and skip players. Turn it off when an area spell is meant for a fight. Hellfire and Chain Lightning can stay levelling tools in a field where other people are standing.</p>
+      <p class="where">Cast 3 HP. Lasts 2 minutes. 40,000 Barr.</p>
+    </div>
+  </article>
+
+  <footer>
+    <p>Draft, 5 Nov 2026. A suggestion. Not a patch.</p>
+  </footer>
+</main>
+</body>
+</html>
